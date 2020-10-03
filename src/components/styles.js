@@ -1,4 +1,4 @@
-const styles = {
+export const styles = {
     text: { textAlign: "center", color : 'darkblue' },
     shopImage: {
       display: "block",

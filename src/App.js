@@ -1,17 +1,23 @@
 import React from 'react';
-import items from './items';
-import styles from './styles';
+import {items} from './components/items.js';
+import {styles} from './components/styles.js';
+import petsList from './components/PetsList';
 
 function App() {
-  const petsList = items.map((item) => (
-    <div key={item.id} >
-      <img  style={styles.shopImage} alt={item.name} src={item.image} />
-      <p style={styles.text}>{item.name}</p>
-      <p style={styles.text}>{item.price} SR</p>
-    </div>
-    
-  ));
-  return <div style = {styles.backgrounds}>{petsList}</div>;
-}
+  
 
+  return ( 
+  <div>
+    <header>
+    <h1 style={styles.text} >Pets Shop</h1>
+      <p style={styles.text} >Best Pets Ever..</p>
+      <img style={styles.shopImage} src="https://cdn2.vectorstock.com/i/1000x1000/01/66/pet-shop-sign-with-three-kinds-of-pets-vector-19020166.jpg" alt="shop pic" ></img>
+    </header>
+    <petsList items = {items}/>
+
+    
+  </div>
+
+  );
+}  
 export default App;

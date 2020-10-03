@@ -1,4 +1,4 @@
-const items  = [
+export const items  = [
     {
         id: 1,
         name: "dog",
@@ -12,4 +12,3 @@ const items  = [
         image: "https://t1.ea.ltmcdn.com/en/images/1/7/1/20_white_cat_breeds_full_list_3171_orig.jpg"
     },
 ]
-export default items;
