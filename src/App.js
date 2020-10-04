@@ -1,22 +1,31 @@
 import React from 'react';
 import {items} from './components/items.js';
-import {styles} from './components/styles.js';
 import PetsList from './components/PetsList';
+import { Description, ShopImage, Title, ListWrapper, PetWrapper, GlobalStyle } from "./components/styles";
+import { ThemeProvider } from "styled-components";
+
+
+
+const theme = {
+  mainColor: "darkblue",
+  backgroundColor: "lightblue",
+  darkRed: "darkred",
+};
 
 function App() {
   
 
   return ( 
-  <div>
+    <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <header>
-    <h1 style={styles.text} >Pets Shop</h1>
-      <p style={styles.text} >Best Pets Ever..</p>
-      <img style={styles.shopImage} src="https://cdn2.vectorstock.com/i/1000x1000/01/66/pet-shop-sign-with-three-kinds-of-pets-vector-19020166.jpg" alt="shop pic" ></img>
+    <Title>Pets Shop</Title>
+      <Description>Best Pets Ever..</Description>
+      <ShopImage src="https://previews.123rf.com/images/nalinn/nalinn1609/nalinn160900707/62745947-pets-shop-name-board.jpg" alt="shop pic"/>
     </header>
     <PetsList items = {items}/>
 
-
-  </div>
+  </ThemeProvider>
 
   );
 }  

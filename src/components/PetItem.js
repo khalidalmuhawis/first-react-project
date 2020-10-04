@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './styles';
+import { Description, ShopImage, Title, ListWrapper, PetWrapper } from "./styles";
+
 
 
 const PetsItem = (props) => {
@@ -7,9 +8,11 @@ const PetsItem = (props) => {
 
     return (
         <div>
-        <img style={styles.shopImage} alt={item.name} src={item.image}/>
-        <p style={styles.text}>{item.name}</p>
-        <p style={styles.text}>{item.price} SR</p>
+            <PetWrapper>    
+                <img alt={item.name} src={item.image}/>
+                <p >{item.name}</p>
+                <p className="cookie-price">{item.price} SR</p>
+            </PetWrapper>    
         </div>
     )
 }
