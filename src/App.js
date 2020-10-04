@@ -1,7 +1,7 @@
 import React from 'react';
 import {items} from './components/items.js';
 import {styles} from './components/styles.js';
-import petsList from './components/PetsList';
+import PetsList from './components/PetsList';
 
 function App() {
   
@@ -13,9 +13,9 @@ function App() {
       <p style={styles.text} >Best Pets Ever..</p>
       <img style={styles.shopImage} src="https://cdn2.vectorstock.com/i/1000x1000/01/66/pet-shop-sign-with-three-kinds-of-pets-vector-19020166.jpg" alt="shop pic" ></img>
     </header>
-    <petsList items = {items}/>
+    <PetsList items = {items}/>
 
-    
+
   </div>
 
   );
